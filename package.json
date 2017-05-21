@@ -1,8 +1,28 @@
 {
-  "devDependencies": {
-    "lerna": "^2.0.0-rc.4"
+  "name": "previous",
+  "version": "0.0.0",
+  "description": "Framework for server-rendered Preact.js applications.",
+  "repository": "https://github.com/ezekielchentnik/previous",
+  "author": "@ezekielchentnik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezekielchentnik/previous/issues"
   },
-  "scripts": {
-    "postinstall": "lerna bootstrap"
+  "bin": {
+    "previous": "./bin/previous"
+  },
+  "dependencies": {
+    "babel-core": "6.24.1",
+    "cross-spawn": "5.1.0",
+    "nodemon": "1.11.0",
+    "ramda": "0.23.0",
+    "rollup": "0.41.6",
+    "rollup-plugin-babel": "2.7.1",
+    "rollup-plugin-commonjs": "8.0.2",
+    "rollup-plugin-json": "2.1.1",
+    "rollup-plugin-replace": "1.1.1",
+    "rollup-watch": "3.2.2",
+    "source-map-support": "0.4.15",
+    "xo": "0.18.2"
   }
 }
