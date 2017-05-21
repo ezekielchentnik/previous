@@ -1,0 +1,32 @@
+#! /usr/bin/env node
+const rollup = require('rollup')
+const paths = require('../config/paths')
+const once = require('ramda').once
+const defaultConfig = require('../config/rollup.config')
+const path = require('path')
+const fs = require('fs')
+
+const options = {
+  env: 'production'
+}
+
+const configPath = path.resolve('thriller.config.js')
+let userConfig = {}
+
+if (fs.existsSync(configPath)) {
+  const userConfigModule = require(configPath)
+  userConfig = userConfigModule.default || userConfigModule
+}
+
+const serverConfig = userConfig.rollup
+      ? userConfig.rollup(defaultConfig(options), options, rollup)
+      : defaultConfig(options)
+
+process.on('SIGINT', process.exit)
+
+rollup.rollup(serverConfig).then((bundle) => {
+  bundle.write(serverConfig.targets[0])
+}).catch((err) => {
+  console.log(err)
+  process.exitCode = 1
+})

@@ -1,5 +1,3 @@
-![thriller](https://raw.githubusercontent.com/ezekielchentnik/thriller/master/thriller.png)
-
 # Thriller
 Thriller is an easy peasy build system for Node.js micro-services on top of [Rollup](https://github.com/rollup/rollup).  Thriller lets you create modern Node.js apps and services with zero config. Thriller handles all the watching, reloading, transpiling, and bundling for you. It comes with a few `healthy` defaults and support for modern JS features.  Everything can be customized and you can easily add Thriller to your existing Node.js project with just a single dependency, batteries included.  Inspired by backpack, nuxt.js, next.js, and create-react-app
 

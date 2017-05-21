@@ -1,0 +1,29 @@
+{
+  "name": "thriller",
+  "version": "0.0.1",
+  "description": "Thriller is a configureless build system for Node.js microservices on top of Rollup",
+  "repository": "https://github.com/ezekielchentnik/thriller",
+  "author": "@ezekielchentnik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezekielchentnik/thriller/issues"
+  },
+  "bin": {
+    "thriller": "./bin/thriller"
+  },
+  "dependencies": {
+    "babel-core": "6.24.1",
+    "babel-preset-thriller": "^0.0.1",
+    "cross-spawn": "5.1.0",
+    "nodemon": "1.11.0",
+    "ramda": "0.23.0",
+    "rollup": "0.41.6",
+    "rollup-plugin-babel": "2.7.1",
+    "rollup-plugin-commonjs": "8.0.2",
+    "rollup-plugin-json": "2.1.1",
+    "rollup-plugin-replace": "1.1.1",
+    "rollup-watch": "3.2.2",
+    "source-map-support": "0.4.15",
+    "xo": "0.18.2"
+  }
+}
